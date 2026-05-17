@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kahalagahan ng Panitikan</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #071019;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #10b981, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 24px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .fade {
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full glass border-b border-white/10 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+    <h1 class="font-bold">📖 Panitikang Panlipunan</h1>
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-emerald-400">Simula</a>
+      <a href="kahalagahan.html" class="text-emerald-400 font-bold">Kahalagahan</a>
+      <a href="tuluyan.html" class="hover:text-emerald-400">Tuluyan</a>
+      <a href="patula.html" class="hover:text-emerald-400">Patula</a>
+      <a href="repleksyon.html" class="hover:text-emerald-400">Repleksyon</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 pb-16 text-center fade px-6">
+
+  <h1 class="text-4xl md:text-6xl font-black">
+    Kahalagahan ng <span class="gradient-text">Panitikan</span>
+  </h1>
+
+  <p class="mt-6 text-slate-300 max-w-2xl mx-auto">
+    Ang panitikan ay hindi lamang sining ng salita, ito ay buhay na tala ng karanasan, kultura, at kamalayan ng lipunan.
+  </p>
+
+</section>
+
+<!-- CONTENT -->
+<section class="max-w-6xl mx-auto px-6 pb-20">
+
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="card">
+      <h2 class="text-xl font-bold mb-3">📚 Pagpapanatili ng Kultura</h2>
+      <p>
+        Ang panitikan ay nagsisilbing tagapag-ingat ng tradisyon, paniniwala, at kasaysayan ng isang bansa.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="text-xl font-bold mb-3">🧠 Paglinang ng Kaisipan</h2>
+      <p>
+        Pinapalawak nito ang pag-iisip at kritikal na pag-unawa ng mambabasa sa lipunan at mundo.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="text-xl font-bold mb-3">❤️ Pagpapahayag ng Damdamin</h2>
+      <p>
+        Sa pamamagitan ng panitikan, naipapahayag ang masalimuot na emosyon ng tao sa malikhaing paraan.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 class="text-xl font-bold mb-3">🌏 Kamalayang Panlipunan</h2>
+      <p>
+        Nagbubukas ito ng mata sa mga isyung panlipunan tulad ng kahirapan, hustisya, at karapatang pantao.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-slate-400 border-t border-white/10">
+  Panitikang Panlipunan | CvSU Carmona Campus
+</footer>
+
+</body>
+</html>

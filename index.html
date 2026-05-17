@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panitikang Panlipunan | CvSU</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- INTERNAL CSS (FIXED VERSION) -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #071019;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+    }
+
+    .gradient-text {
+      background: linear-gradient(to right, #10b981, #34d399);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary {
+      background: #10b981;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #059669;
+      transform: scale(1.05);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 24px;
+      border-radius: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .fade {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full glass z-50 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+    <h1 class="font-bold text-lg">📖 Panitikang Panlipunan | CvSU</h1>
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-emerald-400">Simula</a>
+      <a href="kahalagahan.html" class="hover:text-emerald-400">Kahalagahan</a>
+      <a href="tuluyan.html" class="hover:text-emerald-400">Tuluyan</a>
+      <a href="patula.html" class="hover:text-emerald-400">Patula</a>
+      <a href="repleksyon.html" class="hover:text-emerald-400">Repleksyon</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="min-h-screen flex items-center justify-center text-center px-6 fade">
+
+  <div>
+    <h1 class="text-4xl md:text-6xl font-black leading-tight">
+      Panitikan: Ang Malikhaing <br>
+      <span class="gradient-text">Salamin ng Lipunan</span>
+    </h1>
+
+    <p class="mt-6 text-slate-300 max-w-2xl mx-auto">
+      Isang paglalakbay sa mundo ng Tuluyan at Patula bilang repleksyon ng kultura, damdamin, at karanasan ng Pilipino.
+    </p>
+
+    <div class="mt-8 flex gap-4 justify-center flex-wrap">
+      <a href="kahalagahan.html" class="btn btn-primary">Simulan</a>
+      <a href="tuluyan.html" class="btn btn-outline">Tuklasin</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- SECTION -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+
+  <h2 class="text-3xl font-bold text-center mb-10">Ano ang Panitikan?</h2>
+
+  <div class="card">
+    <p>
+      Ang panitikan ay kalipunan ng mga karanasan, kaisipan, at damdamin ng tao na naipapahayag sa malikhaing paraan. Ito ay nagsisilbing salamin ng kultura at lipunan.
+    </p>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-slate-400 border-t border-white/10">
+  Binuo para sa Panitikang Panlipunan | CvSU Carmona Campus
+</footer>
+
+</body>
+</html>

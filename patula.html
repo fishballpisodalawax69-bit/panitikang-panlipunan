@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anyong Patula (Tula)</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #071019;
+      color: white;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .poetry-card {
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .poetry-card:hover {
+      transform: scale(1.05);
+      background: rgba(16,185,129,0.15);
+    }
+
+    .fade {
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full glass border-b border-white/10 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+    <h1 class="font-bold">📖 Panitikang Panlipunan</h1>
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-emerald-400">Simula</a>
+      <a href="kahalagahan.html" class="hover:text-emerald-400">Kahalagahan</a>
+      <a href="tuluyan.html" class="hover:text-emerald-400">Tuluyan</a>
+      <a href="patula.html" class="text-emerald-400 font-bold">Patula</a>
+      <a href="repleksyon.html" class="hover:text-emerald-400">Repleksyon</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 text-center px-6">
+
+  <h1 class="text-4xl md:text-6xl font-black">
+    Anyong <span class="text-emerald-400">Patula</span> (Tula)
+  </h1>
+
+  <p class="mt-6 text-slate-300 max-w-2xl mx-auto">
+    Mga akdang pampanitikan na nakasulat sa taludtod na maaaring may sukat at tugma o malayang taludturan.
+  </p>
+
+</section>
+
+<!-- ELEMENTS -->
+<section class="max-w-6xl mx-auto px-6 py-16">
+
+  <h2 class="text-2xl font-bold text-center mb-10">8 na Elemento ng Tula</h2>
+
+  <div class="grid md:grid-cols-4 gap-4">
+
+    <div class="card poetry-card">Tugma</div>
+    <div class="card poetry-card">Sukat</div>
+    <div class="card poetry-card">Paksa</div>
+    <div class="card poetry-card">Talinghaga</div>
+    <div class="card poetry-card">Imahen</div>
+    <div class="card poetry-card">Aliw-iw</div>
+    <div class="card poetry-card">Tono</div>
+    <div class="card poetry-card">Persona</div>
+
+  </div>
+
+</section>
+
+<!-- ANYO NG TULA -->
+<section class="max-w-6xl mx-auto px-6 pb-20">
+
+  <h2 class="text-2xl font-bold text-center mb-10">3 Anyo ng Tula</h2>
+
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="card">
+      <h3 class="font-bold text-lg mb-2">Tradisyunal</h3>
+      <p>May sukat, tugma, at masining na talinghaga.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="font-bold text-lg mb-2">Malayang Taludturan</h3>
+      <p>Walang sukat at tugma ngunit may malalim na kaisipan.</p>
+    </div>
+
+    <div class="card">
+      <h3 class="font-bold text-lg mb-2">Blangko Berso</h3>
+      <p>May sukat ngunit walang tugma.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="text-center py-10 text-slate-400 border-t border-white/10">
+  Panitikang Panlipunan | CvSU Carmona Campus
+</footer>
+
+</body>
+</html>
