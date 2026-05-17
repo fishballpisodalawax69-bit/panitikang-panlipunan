@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anyong Tuluyan (Prosa)</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #071019;
+      color: white;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(14px);
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 20px;
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .tab-btn {
+      padding: 12px 16px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .tab-btn:hover {
+      background: rgba(16,185,129,0.15);
+    }
+
+    .tab-active {
+      background: #10b981 !important;
+      color: white;
+      font-weight: 700;
+    }
+
+    .fade {
+      animation: fadeIn 0.6s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(10px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 w-full glass border-b border-white/10 z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+    <h1 class="font-bold">📖 Panitikang Panlipunan</h1>
+
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href="index.html" class="hover:text-emerald-400">Simula</a>
+      <a href="kahalagahan.html" class="hover:text-emerald-400">Kahalagahan</a>
+      <a href="tuluyan.html" class="text-emerald-400 font-bold">Tuluyan</a>
+      <a href="patula.html" class="hover:text-emerald-400">Patula</a>
+      <a href="repleksyon.html" class="hover:text-emerald-400">Repleksyon</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="pt-32 text-center px-6">
+
+  <h1 class="text-4xl md:text-6xl font-black">
+    Anyong <span class="text-emerald-400">Tuluyan</span> (Prosa)
+  </h1>
+
+  <p class="mt-6 text-slate-300 max-w-2xl mx-auto">
+    Mga akdang nakasulat sa karaniwang anyo ng pangungusap na walang sukat at tugma, na naglalayong maglahad ng kaisipan, karanasan, at katotohanan sa mas malinaw at natural na paraan.
+  </p>
+
+</section>
+
+<!-- MAIN -->
+<section class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-3 gap-6">
+
+  <!-- LEFT PANEL (LIMIT 4 VISIBLE + SCROLL) -->
+  <div class="h-[420px] overflow-hidden">
+
+    <div class="h-full overflow-y-auto pr-2 space-y-2">
+
+      <div class="tab-btn tab-active" onclick="showTab('alamat')">Alamat</div>
+      <div class="tab-btn" onclick="showTab('anekdota')">Anekdota</div>
+      <div class="tab-btn" onclick="showTab('maiklingkwento')">Maikling Kwento</div>
+      <div class="tab-btn" onclick="showTab('talumpati')">Talumpati</div>
+
+      <div class="tab-btn" onclick="showTab('pabula')">Pabula</div>
+      <div class="tab-btn" onclick="showTab('parabula')">Parabula</div>
+      <div class="tab-btn" onclick="showTab('sanaysay')">Sanaysay</div>
+      <div class="tab-btn" onclick="showTab('talambuhay')">Talambuhay</div>
+      <div class="tab-btn" onclick="showTab('balita')">Balita</div>
+      <div class="tab-btn" onclick="showTab('nobela')">Nobela</div>
+      <div class="tab-btn" onclick="showTab('dula')">Dula</div>
+      <div class="tab-btn" onclick="showTab('mitolohiya')">Mitolohiya</div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="md:col-span-2 card fade" id="contentBox">
+
+    <h2 class="text-xl font-bold mb-3">Alamat</h2>
+
+    <p>
+      Isang salaysay na nagpapaliwanag ng pinagmulan ng isang bagay, pook, hayop, o pangyayari.
+      Karaniwang ito ay nagmula sa tradisyong pasalita at may halong imahinasyon at paniniwala ng sinaunang lipunan.
+    </p>
+
+    <hr class="my-4 border-white/10">
+
+    <p class="text-sm text-slate-300">
+      <strong>Elemento:</strong> Tauhan, Tagpuan, Saglit na Kasiglahan, Tunggalian, Kasukdulan, Kakalasan, Katapusan
+    </p>
+
+  </div>
+
+</section>
+
+<!-- SCRIPT -->
+<script>
+  const data = {
+    alamat: {
+      title: "Alamat",
+      text: "Isang salaysay na nagpapaliwanag sa pinagmulan ng isang bagay, lugar, hayop, o pangyayari. Ito ay nakabatay sa tradisyong pasalita at may halong imahinasyon at paniniwala ng sinaunang lipunan.",
+      extra: "Elemento: Tauhan, Tagpuan, Saglit na Kasiglahan, Tunggalian, Kasukdulan, Kakalasan, Katapusan"
+    },
+
+    anekdota: {
+      title: "Anekdota",
+      text: "Isang maikling salaysay na maaaring hango sa tunay na buhay o kathang-isip, kadalasang umiikot sa isang kilalang tao o makabuluhang pangyayari. Layunin nitong magbigay-aliw at aral.",
+      extra: "Katangian: Maikli, tuwiran, may aral, at nakatuon sa isang pangyayari"
+    },
+
+    maiklingkwento: {
+      title: "Maikling Kwento",
+      text: "Isang masining na anyo ng panitikan na nakatuon sa isang pangunahing pangyayari. Layunin nitong mag-iwan ng kakintalan o malalim na impresyon sa mambabasa.",
+      extra: "Ama ng Maikling Kwento: Deogracias Rosario | May Simula, Gitna, at Wakas"
+    },
+
+    talumpati: {
+      title: "Talumpati",
+      text: "Isang pormal na pagpapahayag ng kaisipan at damdamin sa harap ng tagapakinig upang magbigay-impormasyon, manghikayat, o magbigay-inspirasyon.",
+      extra: "Uri: Impormatibo, Persuweysib, Inspirasyonal, Impromptu, Extemporaneous, Panlibangan"
+    },
+
+    pabula: {
+      title: "Pabula",
+      text: "Isang salaysay na ang mga tauhan ay hayop, halaman, o bagay na kumikilos at nagsasalita na parang tao. Layunin nitong magbigay-aral o moral na aral.",
+      extra: "Elemento: Tauhan, Tagpuan, Banghay, Aral"
+    },
+
+    parabula: {
+      title: "Parabula",
+      text: "Isang talinghagang salaysay na naglalahad ng aral sa buhay at espiritwal na kahulugan. Madalas itong ginagamit sa pagtuturo ng moral na aral.",
+      extra: "Katangian: May simbolismo, may aral, at may moral/espiritwal na kahulugan"
+    },
+
+    sanaysay: {
+      title: "Sanaysay",
+      text: "Isang akdang nagpapahayag ng pananaw, opinyon, o ideya ng may-akda tungkol sa isang paksa. Maaari itong pormal o di-pormal.",
+      extra: "Bahagi: Panimula, Katawan, Wakas | Uri: Pormal at Di-pormal"
+    },
+
+    talambuhay: {
+      title: "Talambuhay",
+      text: "Isang salaysay ng buhay ng isang tao mula sa kanyang kapanganakan hanggang sa mahahalagang pangyayari sa kanyang buhay.",
+      extra: "Uri: Awtobiograpiya at Biyograpiya"
+    },
+
+    balita: {
+      title: "Balita",
+      text: "Isang ulat ng kasalukuyang pangyayari na mahalaga, makatotohanan, at napapanahon. Layunin nitong magbigay-impormasyon sa publiko.",
+      extra: "Katangian: Kapanahunan, Katumpakan, Kaangkupan, Kalinawan, Kaugnayan"
+    },
+
+    nobela: {
+      title: "Nobela",
+      text: "Isang mahabang anyo ng salaysay na binubuo ng maraming kabanata at masalimuot na banghay na tumatalakay sa iba’t ibang tauhan at pangyayari.",
+      extra: "Elemento: Tauhan, Tagpuan, Banghay, Tema, Tunggalian"
+    },
+
+    dula: {
+      title: "Dula",
+      text: "Isang akdang pampanitikan na isinasadula sa entablado sa pamamagitan ng kilos at diyalogo ng mga tauhan.",
+      extra: "Bahagi: Yugto, Tanghal, Eksena | Elemento: Tauhan, Banghay, Diyalogo"
+    },
+
+    mitolohiya: {
+      title: "Mitolohiya",
+      text: "Mga salaysay tungkol sa mga diyos, diyosa, at likhang-isip na nilalang na nagpapaliwanag ng kalikasan at pinagmulan ng mundo.",
+      extra: "Elemento: Diyos/Diyosa, Tauhang mitikal, Mahikang tagpuan, Pinagmulan"
+    }
+  };
+
+  function showTab(key) {
+    const box = document.getElementById("contentBox");
+
+    box.classList.remove("fade");
+    void box.offsetWidth;
+    box.classList.add("fade");
+
+    box.innerHTML = `
+      <h2 class="text-xl font-bold mb-3">${data[key].title}</h2>
+      <p>${data[key].text}</p>
+      <hr class="my-4 border-white/10">
+      <p class="text-sm text-slate-300"><strong>${data[key].extra}</strong></p>
+    `;
+
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+      btn.classList.remove("tab-active");
+    });
+
+    event.target.classList.add("tab-active");
+  }
+</script>
+
+</body>
+</html>
